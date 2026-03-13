@@ -1,0 +1,71 @@
+/* Header components  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 70px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Nav Items */
+.nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items ul li {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+/* Underline hover effect */
+.nav-items ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #333333;
+  transition: width 0.25s ease;
+}
+
+.nav-items ul li:hover {
+  color: #000000;
+}
+
+.nav-items ul li:hover::after {
+  width: 100%;
+}
